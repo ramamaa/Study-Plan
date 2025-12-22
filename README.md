@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Learning Intelligence Platform , STUDY PLAN
 
-## Getting Started
+An AI-powered education system that adapts how students learn
+using planning, exams, and AI-driven analysis.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Problem
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Students use many tools that do not work together.
+Study plans do not adapt based on exam results or learning progress.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Solution
 
-## Learn More
+This project creates a closed learning loop:
 
-To learn more about Next.js, take a look at the following resources:
+Plan → Study → Test → Analyze → Improve Plan
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+AI is used only for reasoning, not for storing data.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## High-Level Architecture
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[ User ]
+↓
+[ Next.js Frontend ]
+↓
+[ API Routes ]
+↓
+[ Domain Services ]
+↓
+[ AI Context Builder ]
+↓
+[ Gemini AI ]
+↓
+[ MongoDB ]
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Repository Structure
+
+---
+
+## AI Usage Strategy
+
+- AI receives summarized context only
+- MongoDB is the source of truth
+- AI is called only on major events
+- AI output is cached for demo safety
+
+This allows the project to run on free AI tiers.
+
+---
+
+## Project Scope
+
+- One subject
+- One exam
+- One re-planning cycle
+
+The goal is to demonstrate system intelligence, not a full product.
+
+---
+
+## Team Roles
+
+- Team Lead: Architecture, AI strategy
+- Frontend: UI and UX
+- Backend: API and database
+- AI: Prompt engineering
